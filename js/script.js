@@ -1,10 +1,14 @@
+
 var j = 0;
 var p = 1;
+
+
 document.querySelectorAll('.add-to-cart-button').forEach((event) => {
     let x = event.parentElement;
     let t = x.children[0].src;
     let e = x.children[1].children[0].innerText;
     let w = x.children[1].children[1].innerText;
+    let xy = 1;
     // let p = 1;
     // let j = 0;
 
@@ -18,13 +22,14 @@ document.querySelectorAll('.add-to-cart-button').forEach((event) => {
             <span class="quantity"><span class="decrease"><</span> <span class="value">${p}</span> <span class="increase">></span></span>
             <span class="price">${w}</span>
             <span class="remove-button">✕</span>
+            <span class="xy">${xy}</span>
             </div>
 `;
 
     function y (){
-        if (j == 0) {
+        if (xy == 1) {
             document.getElementById('output').insertAdjacentHTML(position, item);
-            j++
+            xy++;
         } else {
         p = Number(p);
         p++;
