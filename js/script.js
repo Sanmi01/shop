@@ -1,4 +1,3 @@
-
 var j = 0;
 var p = 1;
 document.querySelectorAll('.add-to-cart-button').forEach((event) => {
