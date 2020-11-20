@@ -21,9 +21,6 @@ header a {
     height: 45px;
     position: relative;
     cursor: pointer;
-    /*display: flex;
-    align-items: center;
-    justify-content: center;*/
 }
 
 .cart-icon #item-count {
@@ -128,6 +125,11 @@ h2 {
     border-bottom: 1px solid #a9a9a9;
 }
 
+.checkout-header div {
+    width: 20%;
+}
+
+
 .total {
     margin-top: 30px;
     margin-left: auto;
@@ -159,4 +161,45 @@ h2 {
     box-shadow: rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
     text-shadow: rgba(0, 0, 0, 0.25) 0px -1px 0px;
     border-radius: 4px;
+}
+
+.checkout-item-image {
+    display: inline-block;
+}
+
+.checkout-item-image img {
+    width: 100%
+}
+
+.checkout-item {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    border-bottom: 1px solid #a9a9a9;
+}
+
+.checkout-item div, .checkout-item span {
+    width: 20%
+}
+
+#output {
+    width: 100%
+}
+
+.in-cart {
+    display: none;
+}
+
+.checkout-item, #total {
+    font-size: large;
+    font-weight: bold;
+}
+
+.increase, .decrease, .remove-button {
+    cursor: pointer;
+}
+
+.value {
+    margin-left: 3px;
+    margin-right: 3px;
 }
