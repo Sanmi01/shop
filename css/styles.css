@@ -23,7 +23,7 @@ header a {
     cursor: pointer;
 }
 
-.cart-icon #item-count {
+.cart-icon .item-count {
     position: absolute;
     font-size: 13px;
     font-weight: 700;
@@ -182,7 +182,7 @@ h2 {
     width: 20%
 }
 
-#output {
+.output {
     width: 100%
 }
 
@@ -204,6 +204,6 @@ h2 {
     margin-right: 3px;
 }
 
-.xy {
+.totalPrice {
     display: none;
 }
