@@ -31,6 +31,11 @@ header a {
     right: 19px;
 }
 
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
 section {
     margin: 60px;
 }
@@ -165,6 +170,7 @@ h2 {
 
 .checkout-item-image {
     display: inline-block;
+    margin-right: 10px;
 }
 
 .checkout-item-image img {
@@ -184,10 +190,6 @@ h2 {
 
 .output {
     width: 100%
-}
-
-.in-cart {
-    display: none;
 }
 
 .checkout-item, #total {
