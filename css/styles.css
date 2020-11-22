@@ -45,16 +45,16 @@ section div {
 }
 
 .items-list {
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; */
     display: grid;
-    /* align-items: center; */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 0.65fr));
     grid-auto-rows: 300px;
     gap: 1.5rem;
+    justify-content: center;
 }
 
+.item {
+    margin: auto;
+}
 .items-list > div {
     width: 100%;
     height: 100%;
