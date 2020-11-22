@@ -212,10 +212,11 @@ img {
 
 
 
-.total {
+#total {
     margin-top: 30px;
     margin-left: auto;
     font-size: 36px;
+    font-weight: bold;
 }
 
 .test-warning {
@@ -274,7 +275,7 @@ img {
     width: 100%
 }
 
-.checkout-item, #total {
+.checkout-item {
     font-size: large;
     font-weight: bold;
 }
