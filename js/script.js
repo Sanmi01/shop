@@ -344,6 +344,7 @@ function deleteButtons() {
 }
 
 
+
 onLoadCartNumbers();
 displayCart();
 
