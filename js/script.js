@@ -347,6 +347,7 @@ function deleteButtons() {
 onLoadCartNumbers();
 displayCart();
 
+
 const dropdown = document.querySelector('.cart-dropdown');
 document.querySelector('.cart-icon').addEventListener('click', () => {
     if(dropdown.style.display == 'none') {
