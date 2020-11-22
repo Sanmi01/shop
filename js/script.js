@@ -145,7 +145,8 @@ var items = [
 for (let i = 0; i < addCart.length; i++){
     addCart[i].addEventListener("click", ()=>{
        cartNumbers(items[i]);
-       totalCost(items[i])
+       totalCost(items[i]);
+       displayCart();
   });
 }
 
@@ -225,6 +226,7 @@ function displayCart() {
     cartCost = parseInt(cartCost);
 
     let output = document.querySelector('.output');
+    let cartMenu = document.querySelector('.cart-items');
 
     if(cartItems && output) {
         output.innerHTML = '';
@@ -243,10 +245,31 @@ function displayCart() {
             `
         
         });
+
+        
+
+
+
         let y = localStorage.getItem("totalCost");
         document.getElementById('amount').innerText = y;
         deleteButtons();
         manageQuantity();
+    }
+
+    if(cartItems && cartMenu) {
+        cartMenu.innerHTML = '';
+        Object.values(cartItems).map( (item, index) => {
+            cartMenu.innerHTML += `
+            <div class="cart-item">
+                <img src = "${item.image}" />
+                <div class="item-details">
+                    <span class="checkout-item-name">${item.name}</span>
+                    <span class="quantity"> <span class="value">${item.inCart}</span> X 
+                    <span class="price"> N${item.price}</span>
+                </div>
+            </div>
+            `
+        });
     }
 };
 
@@ -323,3 +346,12 @@ function deleteButtons() {
 
 onLoadCartNumbers();
 displayCart();
+
+const dropdown = document.querySelector('.cart-dropdown');
+document.querySelector('.cart-icon').addEventListener('click', () => {
+    if(dropdown.style.display == 'none') {
+        dropdown.style.display = 'block'
+    } else {
+        dropdown.style.display = 'none'
+    }
+})
