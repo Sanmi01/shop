@@ -238,9 +238,9 @@ function displayCart() {
                  </div>
                  <span class="checkout-item-name">${item.name}</span>
                  <span class="quantity"><span class="decrease"><</span> <span class="value">${item.inCart}</span> <span class="increase">></span></span>
-                 <span class="price">${item.price}</span>
+                 <span class="prices">${item.price}</span>
                  <span class="remove-button">✕</span>
-                 <div class="totalPrice">$${item.inCart * item.price},00</div>
+                 <div class="totalPrice">₦${item.inCart * item.price}</div>
                  </div>
             `
         
@@ -263,9 +263,9 @@ function displayCart() {
             <div class="cart-item">
                 <img src = "${item.image}" />
                 <div class="item-details">
-                    <span class="checkout-item-name">${item.name}</span>
-                    <span class="quantity"> <span class="value">${item.inCart}</span> X 
-                    <span class="price"> N${item.price}</span>
+                    <span class="checkout-item-names">${item.name}</span>
+                    <span class="Quantity"> <span class="value">${item.inCart}</span> X 
+                    <span class="Prices">₦${item.price}</span>
                 </div>
             </div>
             `
@@ -342,7 +342,6 @@ function deleteButtons() {
         })
     }
 }
-
 
 
 onLoadCartNumbers();
