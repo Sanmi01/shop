@@ -185,11 +185,15 @@ h2 {
     border: 1px solid #000;
 }
 
+img {
+    border-radius: 5px;
+}
+
 
 /* CHECKOUT PAGE  */
 
 .checkout-page {
-    width: 55%;
+    width: 80%;
     min-height: 90vh;
     display: flex;
     flex-direction: column;
@@ -203,6 +207,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #a9a9a9;
+    font-weight: 700;
 }
 
 .checkout-header div {
@@ -257,6 +262,9 @@ h2 {
     padding: 10px 0;
     display: flex;
     border-bottom: 1px solid #a9a9a9;
+    align-items: center;
+  justify-content: center;
+
 }
 
 .checkout-item div, .checkout-item span {
@@ -276,9 +284,10 @@ h2 {
     cursor: pointer;
 }
 
+
 .value {
-    margin-left: 3px;
-    margin-right: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .totalPrice {
