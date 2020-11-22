@@ -45,32 +45,38 @@ section div {
 }
 
 .items-list {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; */
+    display: grid;
+    /* align-items: center; */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 300px;
+    gap: 1.5rem;
 }
 
 .items-list > div {
-    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.items-list > div > img {
+    width: 100%;
+    height: 90%;
 }
 
 .items-list > div > p {
     display: flex;
     justify-content: space-between;
+    font-size: 19px;
+    margin-top: 3px;
+    margin-bottom: 5px;
 }
 
-.item {
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    align-self: center;
-    place-items: center;
-    margin: auto;
-}
+
 
 h2 {
     margin: auto;
-    padding-left: 22px;
     padding-bottom: 10px;
 }
 
