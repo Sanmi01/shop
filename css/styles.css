@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+
+
 * {
     margin: 0;
     padding: 0;
@@ -78,6 +81,8 @@ section div {
 h2 {
     margin: auto;
     padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 28px;
 }
 
 .add-to-cart-button {
