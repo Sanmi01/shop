@@ -256,7 +256,8 @@ function displayCart() {
         manageQuantity();
     }
 
-    if(cartItems && cartMenu) {
+    
+    if(Object.keys(cartItems).length) {
         cartMenu.innerHTML = '';
         Object.values(cartItems).map( (item, index) => {
             cartMenu.innerHTML += `
@@ -270,6 +271,8 @@ function displayCart() {
             </div>
             `
         });
+    } else {
+        cartMenu.innerHTML = '<span class="empty-message">Your cart is empty</span>';
     }
 };
 
@@ -346,7 +349,6 @@ function deleteButtons() {
 
 onLoadCartNumbers();
 displayCart();
-
 
 const dropdown = document.querySelector('.cart-dropdown');
 document.querySelector('.cart-icon').addEventListener('click', () => {
