@@ -282,7 +282,11 @@ function manageQuantity() {
     let currentQuantity = 0;
     let currentProduct = '';
     let cartItems = localStorage.getItem('itemsInCart');
+    let productNumbers = localStorage.getItem('cartNumbers');
+    let cartCost = localStorage.getItem("totalCost");
+    let productName;
     cartItems = JSON.parse(cartItems);
+    
 
     for(let i=0; i < decreaseButtons.length; i++) {
         decreaseButtons[i].addEventListener('click', () => {
@@ -290,10 +294,17 @@ function manageQuantity() {
             currentQuantity = parseInt(currentQuantity)
             currentProduct = decreaseButtons[i].parentElement.previousElementSibling.textContent;
 
-            if( cartItems[currentProduct].inCart > 1 ) {
+            if( cartItems[currentProduct].inCart >= 1 ) {
                 cartItems[currentProduct].inCart -= 1;
                     if(cartItems[currentProduct].inCart == 0) {
-                        delete decreaseButtons[i].parentElement.parentElement;
+                        productName = decreaseButtons[i].parentElement.parentElement.children[1].textContent;
+                        localStorage.setItem('cartNumbers', productNumbers - 1);
+                        localStorage.setItem('totalCost', cartCost - ( cartItems[productName].price));
+                        delete cartItems[productName];
+                        localStorage.setItem('itemsInCart', JSON.stringify(cartItems));
+
+                        displayCart();
+                        onLoadCartNumbers();
                     } else {
                         cartNumbers(cartItems[currentProduct], "decrease");
                     totalCost(cartItems[currentProduct], "decrease");
@@ -308,7 +319,6 @@ function manageQuantity() {
         });
 
         increaseButtons[i].addEventListener('click', () => {
-            console.log(cartItems);
             currentQuantity = increaseButtons[i].parentElement.querySelector('.value').textContent;
             currentQuantity = parseInt(currentQuantity)
             currentProduct = increaseButtons[i].parentElement.previousElementSibling.textContent;
